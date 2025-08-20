@@ -4,9 +4,10 @@ import 'package:donutshop/utility/constants.dart' as constants;
 import 'package:flutter/material.dart';
 
 class DonutBottomBarSelectionService extends ChangeNotifier {
-
+// state
   String? tabSelection = 'main';
-
+  
+// method to update the state
   void setTabSelection(String selection) {
     constants.Utils.mainListNav.currentState!.pushReplacementNamed('/$selection');
     tabSelection = selection;
@@ -17,8 +18,10 @@ class DonutBottomBarSelectionService extends ChangeNotifier {
 
 class DonutShoppingCartService extends ChangeNotifier {
 
+//state
   List<DonutModel> cartDonuts = [];
 
+// methods ( combined with notifyListener())
   void addToCart(DonutModel donut) {
     cartDonuts.add(donut);
     notifyListeners();
@@ -36,9 +39,9 @@ class DonutShoppingCartService extends ChangeNotifier {
 
   double getTotal() {
     double cartTotal = 0.0;
-    cartDonuts.forEach((element) {
+    for (var element in cartDonuts) {
       cartTotal += element.price!;
-    });
+    }
 
     return cartTotal;
   }
@@ -70,7 +73,7 @@ class DonutService extends ChangeNotifier {
   void onDonutSelected(DonutModel donut) {
     selectedDonut = donut;
     constants.Utils.mainAppNav.currentState!.pushNamed('/details');
-  }
+    }
 
   DonutService() {
     selectedDonutType = filterBarItems.first.id;

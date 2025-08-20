@@ -60,7 +60,7 @@ class _DonutShopDetailsState extends State<DonutShopDetails>
     var col = Column(
       children: [
         // donut
-        Container(
+        SizedBox(
           height: screenHeight * 0.5,
           child: Stack(
             clipBehavior: Clip.none,
@@ -96,7 +96,7 @@ class _DonutShopDetailsState extends State<DonutShopDetails>
                   children: [
                     Expanded(
                       child: Text(
-                        '${selectedDonut!.name!}',
+                        selectedDonut!.name!,
                         style: TextStyle(
                           color: constants.Utils.mainDark,
                           fontSize: 30,
@@ -113,7 +113,7 @@ class _DonutShopDetailsState extends State<DonutShopDetails>
                   ],
                 ),
                 SizedBox(height: 10),
-                Text('${selectedDonut!.description!}'),
+                Text(selectedDonut!.description!),
                 SizedBox(height: 20),
                 Container(
                   padding: EdgeInsets.only(
@@ -137,7 +137,7 @@ class _DonutShopDetailsState extends State<DonutShopDetails>
                     if (!cartService.isDonutInCart(selectedDonut!)){
                       return GestureDetector(
                         onTap: () {
-                          cartService?.addToCart(selectedDonut!);
+                          cartService.addToCart(selectedDonut!);
                         },
                         child: Container(
                           margin: EdgeInsets.only(top: 20),

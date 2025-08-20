@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:donutshop/utility/constants.dart' as constants;
 
 class DonutShoppingCartBadge extends StatelessWidget {
+  const DonutShoppingCartBadge({super.key});
+
   @override
   Widget build(BuildContext context) {
 

@@ -8,7 +8,7 @@ class DonutShoppingListRow extends StatelessWidget {
   DonutModel? donut;
   Function? onDeleteRow;
 
-  DonutShoppingListRow({ this.donut, required this.onDeleteRow });
+  DonutShoppingListRow({super.key,  this.donut, required this.onDeleteRow });
   
   @override
   Widget build(BuildContext context) {

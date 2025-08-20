@@ -8,7 +8,7 @@ class DonutShoppingList extends StatefulWidget {
 
   List<DonutModel>? donutCart;
   DonutShoppingCartService? cartService;
-  DonutShoppingList({ this.donutCart, this.cartService });
+  DonutShoppingList({super.key,  this.donutCart, this.cartService });
 
   @override
   State<DonutShoppingList> createState() => _DonutShoppingListState();

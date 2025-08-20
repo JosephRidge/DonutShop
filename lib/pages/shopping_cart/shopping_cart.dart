@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class DonutShoppingCartPage extends StatefulWidget {
+  const DonutShoppingCartPage({super.key});
+
   @override
   State<DonutShoppingCartPage> createState() => _DonutShoppingCartPageState();
 }

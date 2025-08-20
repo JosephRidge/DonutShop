@@ -2,7 +2,6 @@
 import 'package:donutshop/pages/home/home.dart';
 import 'package:donutshop/utility/constants.dart' as constants;
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -38,7 +37,7 @@ class SplashPageState extends State<SplashPage>
   @override
   Widget build(BuildContext context) {
 
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 10), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => DonutShopMain())
       );
